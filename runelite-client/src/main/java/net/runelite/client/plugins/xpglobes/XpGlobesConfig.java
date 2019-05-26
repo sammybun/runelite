@@ -34,10 +34,10 @@ import net.runelite.client.config.ConfigItem;
 public interface XpGlobesConfig extends Config
 {
 	@ConfigItem(
-		keyName = "enableTooltips",
-		name = "Enable Tooltips",
-		description = "Configures whether or not to show tooltips",
-		position = 0
+			keyName = "enableTooltips",
+			name = "Enable Tooltips",
+			description = "Configures whether or not to show tooltips",
+			position = 0
 	)
 	default boolean enableTooltips()
 	{
@@ -45,10 +45,10 @@ public interface XpGlobesConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "hideMaxed",
-		name = "Hide maxed skills",
-		description = "Stop globes from showing up for level 99 skills ",
-		position = 1
+			keyName = "hideMaxed",
+			name = "Hide maxed skills",
+			description = "Stop globes from showing up for level 99 skills ",
+			position = 1
 	)
 	default boolean hideMaxed()
 	{
@@ -56,22 +56,32 @@ public interface XpGlobesConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "enableCustomArcColor",
-		name = "Enable custom arc color",
-		description = "Enables the custom coloring of the globe's arc instead of using the skill's default color.",
-		position = 2
+			keyName = "enableCustomArcColor",
+			name = "Enable custom arc color",
+			description = "Enables the custom coloring of the globe's arc instead of using the skill's default color.",
+			position = 2
 	)
 	default boolean enableCustomArcColor()
 	{
 		return false;
 	}
 
+
+	@ConfigItem(
+			keyName = "Progress arc outline",
+			name = "Progress arc outline",
+			description = "Configures whether or not to show progress arc outline",
+			position = 3
+	)
+
+	default boolean enableProgressOutline() { return false;}
+
 	@Alpha
 	@ConfigItem(
-		keyName = "Progress arc color",
-		name = "Progress arc color",
-		description = "Change the color of the progress arc in the xp orb",
-		position = 3
+			keyName = "Progress arc color",
+			name = "Progress arc color",
+			description = "Change the color of the progress arc in the xp orb",
+			position = 4
 	)
 	default Color progressArcColor()
 	{
@@ -80,10 +90,10 @@ public interface XpGlobesConfig extends Config
 
 	@Alpha
 	@ConfigItem(
-		keyName = "Progress orb outline color",
-		name = "Progress orb outline color",
-		description = "Change the color of the progress orb outline",
-		position = 4
+			keyName = "Progress orb outline color",
+			name = "Progress orb outline color",
+			description = "Change the color of the progress orb outline",
+			position = 5
 	)
 	default Color progressOrbOutLineColor()
 	{
@@ -92,10 +102,10 @@ public interface XpGlobesConfig extends Config
 
 	@Alpha
 	@ConfigItem(
-		keyName = "Progress orb background color",
-		name = "Progress orb background color",
-		description = "Change the color of the progress orb background",
-		position = 5
+			keyName = "Progress orb background color",
+			name = "Progress orb background color",
+			description = "Change the color of the progress orb background",
+			position = 6
 	)
 	default Color progressOrbBackgroundColor()
 	{
@@ -103,10 +113,18 @@ public interface XpGlobesConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "Progress arc width",
-		name = "Progress arc width",
-		description = "Change the stroke width of the progress arc",
-		position = 6
+			keyName = "Progress outline width",
+			name = "Progress outline width",
+			description = "Change the stroke width of the progress arc background",
+			position = 7
+	)
+	default int progressArcBackgroundStrokeWidth() { return 3; }
+
+	@ConfigItem(
+			keyName = "Progress arc width",
+			name = "Progress arc width",
+			description = "Change the stroke width of the progress arc",
+			position = 8
 	)
 	default int progressArcStrokeWidth()
 	{
@@ -114,10 +132,10 @@ public interface XpGlobesConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "Orb size",
-		name = "Size of orbs",
-		description = "Change the size of the xp orbs",
-		position = 7
+			keyName = "Orb size",
+			name = "Size of orbs",
+			description = "Change the size of the xp orbs",
+			position = 9
 	)
 	default int xpOrbSize()
 	{
@@ -125,13 +143,13 @@ public interface XpGlobesConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "Orb duration",
-		name = "Duration of orbs",
-		description = "Change the duration the xp orbs are visible",
-		position = 8
+			keyName = "Orb duration",
+			name = "Duration of orbs",
+			description = "Change the duration the xp orbs are visible",
+			position = 10
 	)
 	default int xpOrbDuration()
 	{
-		return 10;
+		return 11;
 	}
 }
